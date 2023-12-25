@@ -8,7 +8,7 @@
     @apply absolute rounded-lg bg-white border border-gray-600 w-11/12 sm:w-11/12 max-h-[31.5rem] md:max-h-[50rem] md:w-[40rem] scale-0 z-30 !transition-all !duration-300 ease-in-out !origin-center
 }
 .modal > form{
-    @apply w-full relative rounded-lg shadow-lg
+    @apply w-full relative rounded-xl shadow-lg
 }
 .modal__title{
     @apply text-lg font-bold text-primary-color max-w-[calc(100%-3rem)] truncate
