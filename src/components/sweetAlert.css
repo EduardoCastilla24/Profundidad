@@ -1,0 +1,31 @@
+.swal2-show{
+    @apply !text-sm !rounded-2xl
+}
+/* TITLE */
+.swal2-title{
+    @apply !text-xl sm:!text-2xl
+}
+/* PARAGRAPH */
+.swal2-html-container{
+    @apply !text-xs sm:!text-sm
+}
+/* ICONOS  */
+.swal2-icon, .swal2-success-ring{
+    @apply !border-primary-color
+}
+.swal2-x-mark-line-left, .swal2-x-mark-line-right, .swal2-success-line-long, .swal2-success-line-tip{
+    @apply !bg-primary-color
+}
+.swal2-icon.swal2-warning{
+    @apply !text-primary-color !text-[10px]
+}
+.swal2-actions{
+    @apply !flex !justify-center !items-center gap-8
+}
+/* BOTONES */
+.swal2-confirm{
+    @apply  !bg-primary-color !rounded-md !px-4 !py-2 !text-xs sm:!text-sm !shadow-md
+}
+.swal2-cancel{
+    @apply !bg-transparent !text-primary-color !border !border-primary-color !rounded-md !px-4 !py-2 !text-xs sm:!text-sm !shadow-md
+}

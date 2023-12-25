@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang='es'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta http-equiv='Content-Security-Policy' content='upgrade-insecure-requests'>
+        <!--================== FAVICON ==================-->
+        <link rel='icon' href='../assets/Iso_DevCast.svg' type='image/x-icon'>
+        <!--================== ESTILOS ==================-->
+        <link rel='stylesheet' href='../dist/output.css'>
+        <!--================== NOTIFLIX ==================-->
+        <script defer src='../js/notiflix/notiflix.js'></script>
+        <link defer rel='stylesheet' href='../js/notiflix/notiflix.css'>
+        <!--================== BOXICONS ==================-->
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css'>
+        <!--================== SWEET ALERT ==================-->
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+        <!--================== DATATABLE==================-->
+        <link rel='stylesheet' href='https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css'>
+        <link rel='stylesheet' href='https://cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.min.css'>
+        <link rel='stylesheet' href='https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css'>
+        <!--================== SCRIPTS==================-->
+        <script async defer src="https://apis.google.com/js/api.js" id="gapi"></script>
+        <script async defer src="https://accounts.google.com/gsi/client" id="gis"></script>
+
+        <!--================== TITLE ==================-->
+        <title>Profundidad</title>
+    </head>
+    <body class="h-screen antialiased scroll">
+        <div id="overlay" class="overlay"></div>
+        <main class="flex justify-center w-full h-full lg:justify-between tall:min-h-screen">
+            <section class="profundidad">
+                <!-- NAVBAR -->
+                <nav>
+                    <h3>Profundidad NoonFood</h3>
+                    <button id="signout_button">
+                        <i class='bx bx-log-in'></i>
+                    </button>
+                </nav>
+                <!-- SECTION TABLE -->
+                <section class="relative container_table">
+                    <article class="section--table">
+                        <!-- TABLE -->
+                        <table class="w-full h-full scroll dataTable display nowrap " cellspacing="0" style="width: 100% !important">
+                        </table>
+                    </article>
+                </section>
+            </section>
+            <!-- MODAL SECTION -->
+            <section id="section__modal" class="section__modal">
+                <article class="modal" id="modal">
+                    <!-- MODAL CONTENT-->
+                    <form method="POST" id="form-newCategoria">
+                        <!-- MODAL HEADER -->
+                        <div class="modal__header">
+                            <!-- TITLE MODAL -->
+                            <h3 class="modal__title" id="modal__title"></h3>
+                            <!-- CLOSE BUTTON -->
+                            <button type="button" id="modal__close" class="modal__close">
+                                <i class="bx bx-x"></i>
+                            </button>
+                        </div>
+                        <!-- MODAL BODY -->
+                        <div class="modal__form">
+                            <div class="!flex justify-center">
+                                <svg id="barcode" class="w-full flex justify-center items-center"></svg>
+                            </div>
+                            <div class="form__element">
+                                <label for="descripcion" class="form__element--label">Descripción</label>
+                                <input type="text" name="descripcion" id="descripcion" class="peer form__element--input" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ ]" readonly>
+                            </div>
+                            <div class="!grid !grid-cols-2 gap-4">
+                                <div class="form__element !col-span-1">
+                                    <label for="precio" class="form__element--label">Precio</label>
+                                    <input type="text" name="precio" id="precio" class="peer form__element--input" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ ]" readonly>
+                                </div>
+                                <div class="form__element !col-span-1">
+                                    <label for="oh" class="form__element--label">OH</label>
+                                    <input type="text" name="oh" id="oh" class="peer form__element--input" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ ]" readonly>
+                                </div>
+                            </div>
+                            <div class="form__element !col-span-1">
+                                <label for="asst" class="form__element--label">Asst.</label>
+                                <input type="text" name="asst" id="asst" class="peer form__element--input" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ ]" readonly>
+                            </div>
+                        </div>
+                    </form>
+                </article>
+            </section>
+        </main>
+        <!--================== MEDIA QUERYS ==================-->
+        <script type='text/javascript' src='https://code.jquery.com/jquery-3.7.0.js'></script>
+        <script type='text/javascript' src='https://code.jquery.com/jquery-latest.js'></script>
+        <!--================== DATATABLE ==================-->
+        <script src='//cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js'></script>
+        <script src='//cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js'></script>
+        <script src="https://cdn.datatables.net/select/1.3.4/js/dataTables.select.min.js"></script>
+        <!--================== SWEET ALERT ==================-->
+        <script src='//cdn.jsdelivr.net/npm/sweetalert2@11'></script>
+        <!--================== SWEET ALERT ==================-->
+        <script src="
+        https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js
+        "></script>
+        <script async defer type="module" src="../js/sheets/auth.js"></script>
+        <script async defer type="module" src="../js/sheets/sheets.js"></script>
+        <script type="module" src="../js/index.js"></script>
+        <script type="module" src="../js/functions/modal.js"></script>
+        <script async defer type="module" src="../js/dataTable/dataTable.js"></script>
+    </body>
+</html>

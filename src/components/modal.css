@@ -1,0 +1,52 @@
+.section__modal{
+    @apply fixed top-0 left-0 -z-10 w-full h-full flex items-center justify-center bg-transparent !transition-all !ease-in-out !scale-0 !opacity-0 duration-500
+}
+.section__modal.show{
+    @apply !duration-200 origin-center
+}
+.modal{
+    @apply absolute rounded-lg bg-white border border-gray-600 w-11/12 sm:w-11/12 max-h-[31.5rem] md:max-h-[50rem] md:w-[40rem] scale-0 z-30 !transition-all !duration-300 ease-in-out !origin-center
+}
+.modal > form{
+    @apply w-full relative rounded-lg shadow-lg
+}
+.modal__title{
+    @apply text-lg font-bold text-primary-color max-w-[calc(100%-3rem)] truncate
+}
+.modal__close{
+    @apply absolute top-3 right-2.5 text-gray-color bg-transparent rounded-lg text-sm p-1 ml-auto flex items-center border border-gray-200 hover:border-primary-color hover:text-primary-color z-20 transition-all duration-100
+}
+.modal__close > i{
+    @apply relative top-1 w-5 h-5
+}
+.modal__text{
+    @apply mb-5 text-sm md:text-lg font-normal text-gray-500 dark:text-gray-400 tracking-wider
+}
+.modal__header{
+    @apply flex justify-between items-start p-4 rounded-t border-b sticky top-0 bg-white
+}
+.modal__form{
+    @apply flex flex-col gap-4 gap-x-6 p-6
+}
+.modal__form--button{
+    @apply flex items-center space-x-2 rounded-b border-t border-gray-200 p-0 pt-2
+}
+.modal__buttons{
+    @apply  w-full flex justify-center gap-4
+}
+
+
+/* INPUTS */
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #fff inset !important;
+    -webkit-text-fill-color:#000 !important;
+}
+.form__element{
+    @apply col-span-2 md:col-span-1 relative z-0 mb-2 w-full flex flex-col gap-2 items-start
+}
+.form__element--label{
+    @apply block text-[.7rem] font-medium text-gray-400 tracking-wider
+}
+.form__element--input{
+    @apply shadow-sm bg-white border border-gray-300 text-gray-900 text-[.7rem] sm:text-sm rounded-lg focus:ring-primary-color focus:border-primary-color block w-full p-2.5 invalid:bg-red-200 invalid:border-red-500 invalid:focus:border-red-500 !transition-all !duration-300
+}
