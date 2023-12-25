@@ -6,7 +6,6 @@ const modal = document.getElementById('modal')
 
 const modalTitle = document.getElementById('modal__title');
 const inputDescripcion = document.getElementById('descripcion');
-const divEad = document.getElementById('barcode');
 const inputPrecio = document.getElementById('precio');
 const inputOh = document.getElementById('oh');
 const inputAsst = document.getElementById('asst');
@@ -21,8 +20,9 @@ export function Modal(descripcion, ean, precio, oh, asst, division){
     inputPrecio.value = precio
     inputOh.value = oh
     inputAsst.value = asst
-    divEad.innerText = ean
-    JsBarcode("#barcode", ean);
+    JsBarcode("#barcode", ean, {
+        fontSize: 20,
+    })
     // EVITAR QUE SE QUEDE ACTIVO EL SIDEBAR Y OVERLAY EN PANTALLAS DESKTOP
     reSize()
 }

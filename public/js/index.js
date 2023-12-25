@@ -31,6 +31,3 @@ document.getElementById('signout_button').onclick = function() {
 document.getElementById('modal__close').onclick = function() {
     closeModal()
 }
-document.getElementById('section__modal').onclick = function() {
-    closeModal()
-}
