@@ -27,6 +27,7 @@ export async function getProductos(hoja) {
                 precio: fila[25],
                 oh: fila[43],
                 asst: fila[31],
+                estado: fila[30],
                 division: fila[1],
             };
             Productos.push(nuevoProducto);

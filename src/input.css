@@ -60,3 +60,11 @@ button, input, select{
 #barcode{
     @apply w-[200px] !h-fit
 }
+
+/* Estados */
+.obsoleto{
+    @apply bg-[#ffc7ce] text-[#9c0006]
+}
+.activo{
+    @apply bg-[#c6efce] text-[#006100]
+}

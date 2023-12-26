@@ -53,6 +53,7 @@ export function tableProductos(data, selectedSheet) {
             data: data,
             columns: [
                 { data: 'descripcion', title: 'Descripción' },
+                { data: 'asst', title: 'Asst', className: 'hidden'},
             ],
             ...commonConfig,
             dom: 'Bfrtip',
@@ -61,7 +62,7 @@ export function tableProductos(data, selectedSheet) {
                 $(row).on('click', function() {
                     // Acción a realizar cuando se hace clic en la fila
                     // console.log('Fila clicada:', data);
-                    Modal(data.descripcion, data.ean, data.precio, data.oh, data.asst, data.division)
+                    Modal(data.descripcion, data.ean, data.precio, data.oh, data.asst, data.division, data.estado)
                 });
             }
         });
