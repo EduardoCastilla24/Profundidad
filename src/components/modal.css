@@ -5,13 +5,13 @@
     @apply !duration-200 origin-center
 }
 .modal{
-    @apply absolute rounded-lg bg-white border border-gray-600 w-11/12 sm:w-11/12 max-h-[31.5rem] md:max-h-[50rem] md:w-[40rem] scale-0 z-30 !transition-all !duration-300 ease-in-out !origin-center
+    @apply absolute rounded-xl bg-white border border-gray-600 w-11/12 sm:w-11/12 max-h-[31.5rem] md:max-h-[50rem] md:w-[40rem] scale-0 z-30 !transition-all !duration-300 ease-in-out !origin-center
 }
 .modal > form{
     @apply w-full relative rounded-xl shadow-lg
 }
 .modal__title{
-    @apply text-lg font-bold text-primary-color max-w-[calc(100%-3rem)] truncate
+    @apply text-base font-bold text-primary-color max-w-[calc(100%-3rem)] truncate
 }
 .modal__close{
     @apply absolute top-3 right-2.5 text-gray-color bg-transparent rounded-lg text-sm p-1 ml-auto flex items-center border border-gray-200 hover:border-primary-color hover:text-primary-color z-20 transition-all duration-100
@@ -23,7 +23,7 @@
     @apply mb-5 text-sm md:text-lg font-normal text-gray-500 dark:text-gray-400 tracking-wider
 }
 .modal__header{
-    @apply flex justify-between items-start p-4 rounded-t border-b sticky top-0 bg-white
+    @apply flex justify-between items-start p-4 rounded-t border-b sticky top-0 bg-transparent
 }
 .modal__form{
     @apply flex flex-col gap-4 gap-x-6 p-6
