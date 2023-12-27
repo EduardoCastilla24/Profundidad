@@ -53,6 +53,7 @@ export function tableProductos(data, selectedSheet) {
             data: data,
             columns: [
                 { data: 'descripcion', title: 'Descripción' },
+                { data: 'ean', title: 'Ean', className: 'hidden'},
                 { data: 'asst', title: 'Asst', className: 'hidden'},
             ],
             ...commonConfig,
