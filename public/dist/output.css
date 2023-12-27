@@ -979,6 +979,12 @@ thead, tbody{
 .modal > form{
   position:
         relative;
+  height:
+        -moz-fit-content !important;
+  height:
+        fit-content !important;
+  max-height:
+        100% !important;
   width:
         100%;
   border-radius:
@@ -1149,11 +1155,11 @@ thead, tbody{
   gap:
         1rem;
   -moz-column-gap:
-        1.5rem;
+        1rem;
        column-gap:
-        1.5rem;
+        1rem;
   padding:
-        1.5rem
+        1rem
 }
 
 .modal__form--button{
