@@ -3,7 +3,6 @@ const overlay = document.getElementById('overlay')
 const sectionModal = document.getElementById('section__modal')
 const modal = document.getElementById('modal')
 
-
 const modalTitle = document.getElementById('modal__title');
 const inputDescripcion = document.getElementById('descripcion');
 const inputEan = document.getElementById('ean');
@@ -17,6 +16,9 @@ export function Modal(descripcion, ean, precio, oh, asst, division, estado){
     overlay.classList.add('show')
     modal.classList.add('active')
 
+
+    estado == 'Obsoleto' ? inputEstado.classList.add('obsoleto') : inputEstado.classList.add('activo')
+
     modalTitle.innerText = division
     inputDescripcion.value = descripcion
     inputEan.innerText = ean
@@ -24,8 +26,6 @@ export function Modal(descripcion, ean, precio, oh, asst, division, estado){
     inputOh.value = oh
     inputAsst.value = asst
     inputEstado.innerText = estado
-
-    estado == 'Obsoleto' ? inputEstado.classList.add('obsoleto') :  inputEstado.classList.add('activo')
 
     JsBarcode("#barcode", ean, {
         displayValue: false,
@@ -38,6 +38,8 @@ export function closeModal(){
     sectionModal.classList.remove('show')
     modal.classList.remove('active')
     overlay.classList.remove('show')
+
+    inputEstado.classList.contains('obsoleto') ? inputEstado.classList.remove('obsoleto') : inputEstado.classList.remove('activo')
 }
 
 function reSize(){
