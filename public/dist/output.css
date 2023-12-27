@@ -1138,6 +1138,12 @@ thead, tbody{
 .modal__form{
   display:
         flex;
+  height:
+        -moz-fit-content !important;
+  height:
+        fit-content !important;
+  max-height:
+        100% !important;
   flex-direction:
         column;
   gap:

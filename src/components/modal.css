@@ -26,7 +26,7 @@
     @apply flex justify-between items-start p-4 rounded-t border-b sticky top-0 bg-transparent
 }
 .modal__form{
-    @apply flex flex-col gap-4 gap-x-6 p-6
+    @apply flex flex-col gap-4 gap-x-6 p-6 !h-fit !max-h-full
 }
 .modal__form--button{
     @apply flex items-center space-x-2 rounded-b border-t border-gray-200 p-0 pt-2
