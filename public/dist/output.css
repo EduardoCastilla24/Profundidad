@@ -927,7 +927,9 @@ thead, tbody{
   z-index:
         30;
   max-height:
-        31.5rem;
+        -moz-fit-content !important;
+  max-height:
+        fit-content !important;
   width:
         91.666667%;
   transform-origin:
@@ -968,7 +970,7 @@ thead, tbody{
 @media (min-width: 768px){
   .modal{
     max-height:
-        50rem;
+        50rem !important;
     width:
         40rem
   }
@@ -2236,16 +2238,16 @@ video {
         1.75rem !important
 }
 
+.text-\[\.7rem\]{
+  font-size:
+        .7rem
+}
+
 .text-xs{
   font-size:
         0.75rem;
   line-height:
         1rem
-}
-
-.text-\[\.7rem\]{
-  font-size:
-        .7rem
 }
 
 .font-semibold{
