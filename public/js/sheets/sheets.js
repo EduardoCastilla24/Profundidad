@@ -29,6 +29,8 @@ export async function getProductos(hoja) {
                 asst: fila[31],
                 estado: fila[30],
                 division: fila[1],
+                sku: fila[9],
+                marca: fila[12],
             };
             Productos.push(nuevoProducto);
         });

@@ -10,8 +10,10 @@ const inputPrecio = document.getElementById('precio');
 const inputOh = document.getElementById('oh');
 const inputAsst = document.getElementById('asst');
 const inputEstado = document.getElementById('estado');
+const inputSku = document.getElementById('sku');
+const inputMarca = document.getElementById('marca');
 
-export function Modal(descripcion, ean, precio, oh, asst, division, estado){
+export function Modal(descripcion, ean, precio, oh, asst, division, estado, sku, marca){
     sectionModal.classList.add('show')
     overlay.classList.add('show')
     modal.classList.add('active')
@@ -22,10 +24,12 @@ export function Modal(descripcion, ean, precio, oh, asst, division, estado){
     modalTitle.innerText = division
     inputDescripcion.value = descripcion
     inputEan.innerText = ean
+    inputSku.value = sku
     inputPrecio.value = precio
     inputOh.value = oh
     inputAsst.value = asst
     inputEstado.innerText = estado
+    inputMarca.value = marca
 
     JsBarcode("#barcode", ean, {
         displayValue: false,

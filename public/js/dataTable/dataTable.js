@@ -55,6 +55,8 @@ export function tableProductos(data, selectedSheet) {
                 { data: 'descripcion', title: 'Descripción' },
                 { data: 'ean', title: 'Ean', className: 'hidden'},
                 { data: 'asst', title: 'Asst', className: 'hidden'},
+                { data: 'sku', title: 'Sku', className: 'hidden'},
+                { data: 'marca', title: 'Marca', className: 'hidden'},
             ],
             ...commonConfig,
             dom: 'Bfrtip',
@@ -63,7 +65,7 @@ export function tableProductos(data, selectedSheet) {
                 $(row).on('click', function() {
                     // Acción a realizar cuando se hace clic en la fila
                     // console.log('Fila clicada:', data);
-                    Modal(data.descripcion, data.ean, data.precio, data.oh, data.asst, data.division, data.estado)
+                    Modal(data.descripcion, data.ean, data.precio, data.oh, data.asst, data.division, data.estado, data.sku, data.marca)
                 });
             }
         });
