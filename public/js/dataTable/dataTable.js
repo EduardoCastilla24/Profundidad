@@ -72,7 +72,7 @@ export function tableProductos(data, selectedSheet) {
     }
 
 
-    select = $('<select><option value="">Filtrar por Division</option><option value="J08">J08</option><option value="J09">J09</option><option value="J10">J10</option></select>')
+    select = $('<select><option value="J08">J08</option><option value="J09">J09</option><option value="J10">J10</option></select>')
     .appendTo($('.dataTables_filter'))
     .on('change', function () {
         const hojaSeleccionada = $(this).val();
