@@ -57,6 +57,7 @@ export function tableProductos(data, selectedSheet) {
                 { data: 'asst', title: 'Asst', className: 'hidden'},
                 { data: 'sku', title: 'Sku', className: 'hidden'},
                 { data: 'marca', title: 'Marca', className: 'hidden'},
+                { data: 'estado', title: 'Estado', className: 'hidden'},
             ],
             ...commonConfig,
             dom: 'Bfrtip',
@@ -72,7 +73,7 @@ export function tableProductos(data, selectedSheet) {
     }
 
 
-    select = $('<select><option value="J08">J08</option><option value="J09">J09</option><option value="J10">J10</option></select>')
+    select = $('<select><option value="">Filtrar por Division</option><option value="J08">J08</option><option value="J09">J09</option><option value="J10">J10</option></select>')
     .appendTo($('.dataTables_filter'))
     .on('change', function () {
         const hojaSeleccionada = $(this).val();
