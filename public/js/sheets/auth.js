@@ -68,7 +68,7 @@ function maybeEnableButtons() {
  * Restore the session from storage if a token is available.
  */
 function restoreSession() {
-    const storedToken = sessionStorage.getItem(TOKEN_STORAGE_KEY);
+    const storedToken = localStorage.getItem(TOKEN_STORAGE_KEY);
     if (storedToken) {
         gapi.client.setToken(JSON.parse(storedToken));
 
@@ -87,7 +87,7 @@ export function handleAuthClick() {
         }
 
         // Guardar el token en el almacenamiento de sesión
-        sessionStorage.setItem(TOKEN_STORAGE_KEY, JSON.stringify(gapi.client.getToken()));
+        localStorage.setItem(TOKEN_STORAGE_KEY, JSON.stringify(gapi.client.getToken()));
         // Redireccion a la pagina
         window.location.href = './public/layout/profundidad.html';
         // Obtener los datos google sheets
@@ -116,7 +116,7 @@ export function handleSignoutClick() {
             google.accounts.oauth2.revoke(token.access_token);
             gapi.client.setToken('');
             // Limpiar el token almacenado en el almacenamiento de sesión
-            sessionStorage.removeItem(TOKEN_STORAGE_KEY);
+            localStorage.removeItem(TOKEN_STORAGE_KEY);
         }
 
     } else {
