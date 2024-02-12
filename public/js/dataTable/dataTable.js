@@ -4,7 +4,7 @@ import { getProductos } from "../sheets/sheets.js";
 
 let dataTable;  // Declarar la variable dataTable fuera de la función
 let select = null;  // Inicializar select en null
-let selectedOption = ""; // Variable para almacenar la opción seleccionada
+let selectedOption = "J08"; // Variable para almacenar la opción seleccionada
 
 // Llamada a getProductos para obtener los datos antes de inicializar la tabla
 export function tableProductos(data, selectedSheet) {
@@ -73,7 +73,7 @@ export function tableProductos(data, selectedSheet) {
     }
 
 
-    select = $('<select><option value="">Filtrar por Division</option><option value="J08">J08</option><option value="J09">J09</option><option value="J10">J10</option></select>')
+    select = $('<select><option value="J08">J08 - VESTUARIO</option><option value="J09">J09 - HOGAR</option><option value="J10">J10 - BAZAR</option></select>')
     .appendTo($('.dataTables_filter'))
     .on('change', function () {
         const hojaSeleccionada = $(this).val();
