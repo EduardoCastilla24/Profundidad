@@ -31,18 +31,18 @@ button, input, select{
 
 .profundidad{
     @apply w-full  bg-slate-50 !overflow-x-hidden;
-    & > .container_table{
-        @apply px-6 md:px-12;
-    }
-    & > nav{
-        @apply flex justify-between !h-[5rem] items-center text-sm bg-primary-color text-white font-semibold tracking-wider px-4 shadow-md mb-2  bg-[url('../assets/background.png')] bg-cover;
-        & > button{
-            @apply !text-lg h-8 w-8 border rounded-md flex items-center justify-center;
-            & > i {
-                @apply relative -left-[.1rem]
-            }
-        }
-    }
+}
+.profundidad > .container_table{
+    @apply px-6 md:px-12;
+}
+.profundidad > nav{
+    @apply flex justify-between !h-[5rem] items-center text-sm bg-primary-color text-white font-semibold tracking-wider px-4 shadow-md mb-2  bg-[url('../assets/background.png')] bg-cover;
+}
+.profundidad > nav > button{
+    @apply !text-lg h-8 w-8 border rounded-md flex items-center justify-center;
+}
+.profundidad > nav > button > i{
+    @apply relative -left-[.1rem]
 }
 
 /* OVERLAY */
