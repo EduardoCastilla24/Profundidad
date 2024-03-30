@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400&family=Outfit:wght@200;300;400;500;600;700;800;900&display=swap');
+@import './components/dataTable.css';
+@import './components/scroll.css';
+@import './components/sweetAlert.css';
+@import './components/modal.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    @apply p-0 m-0 box-border;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Outfit', sans-serif;
+}
+html{
+    @apply min-h-screen h-screen
+}
+
+h1{
+    @apply text-lg font-bold text-center my-10
+}
+
+button, input, select{
+    @apply outline-none
+}
+
+.button_google{
+    @apply w-full xs:w-[20rem] border bg-white border-gray-300 rounded-xl px-4 py-2 text-sm flex items-center justify-center gap-2 hover:scale-[1.02] hover:-translate-y-1 duration-200 transition-all;
+}
+
+.profundidad{
+    @apply w-full  bg-slate-50 !overflow-x-hidden;
+    & > .container_table{
+        @apply px-6 md:px-12;
+    }
+    & > nav{
+        @apply flex justify-between !h-[5rem] items-center text-sm bg-primary-color text-white font-semibold tracking-wider px-4 shadow-md mb-2  bg-[url('../assets/background.png')] bg-cover;
+        & > button{
+            @apply !text-lg h-8 w-8 border rounded-md flex items-center justify-center;
+            & > i {
+                @apply relative -left-[.1rem]
+            }
+        }
+    }
+}
+
+/* OVERLAY */
+.overlay{
+    @apply fixed opacity-0 top-0 w-full h-full bg-overlay-color -z-10
+}
+/* STATES */
+.show{
+    @apply !scale-100 !opacity-100 !z-30 !flex !duration-[100ms] !transition-all !ease-in-out
+}
+.active{
+    @apply flex flex-col !scale-100 !opacity-100 !z-30 transition-all duration-300
+}
+
+#barcode{
+    @apply w-[200px] !h-fit
+}
+
+/* Estados */
+.obsoleto{
+    @apply bg-[#ffc7ce] text-[#9c0006]
+}
+.activo{
+    @apply bg-[#c6efce] text-[#006100]
+}

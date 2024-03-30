@@ -1,0 +1,22 @@
+.scroll{
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.scroll::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #b1b1b1;
+}
+.scroll__side::-webkit-scrollbar-thumb {
+  background-color: #b1b1b19a !important;
+}
+.scroll__cart::-webkit-scrollbar-thumb {
+  background-color: #f0f0f0d3 !important;
+}
+.scroll::-webkit-scrollbar:vertical {
+  width: 6px;
+}
+.scroll::-webkit-scrollbar:horizontal{
+  height: 5px;
+}
